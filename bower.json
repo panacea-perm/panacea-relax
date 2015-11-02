@@ -1,0 +1,37 @@
+{
+  "name": "panacea-relax",
+  "description": "Panacea winter holidays resort",
+  "main": "src/index.html",
+  "authors": [
+    "\"\""
+  ],
+  "license": "WTFPL",
+  "keywords": [
+    "relax",
+    "resort",
+    "winter",
+    "holidays"
+  ],
+  "moduleType": [],
+  "homepage": "panacea-relax.ru",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "lightbox2": "~2.8.1"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "dist/css/bootstrap.css",
+        "dist/js/bootstrap.js"
+      ]
+    }
+  }
+}
