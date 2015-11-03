@@ -10,6 +10,17 @@ body {
 footer {
 }
 
+.panacea-logo {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 195px;
+    height: 84px;
+    background: url(../images/header_logo.png);
+    background-color: rgba(255,255,255,.8);
+    margin-bottom: 10px;
+}
+
 .table {
     font-size: 21px;
 }
@@ -156,7 +167,11 @@ footer {
 
 @media(max-width:640px) {
     .headline {
-        padding: 75px 0 25px 0;
+        padding: 91px 0 25px 0;
+    }
+
+    .panacea-logo {
+        left:15px;
     }
 
     .headline h1 {
