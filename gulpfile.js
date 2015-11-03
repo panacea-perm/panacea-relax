@@ -1,13 +1,12 @@
-var gulp = require('gulp');
-var mainBowerFiles = require('main-bower-files');
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
-var inject = require('gulp-inject');
-var replace = require('gulp-replace');
-var flatten = require('gulp-flatten');
-var cssmin = require('gulp-cssmin');
-var es = require('event-stream');
-var ghPages = require('gulp-gh-pages');
+var gulp = require('gulp'),
+    mainBowerFiles = require('main-bower-files'),
+    concat = require('gulp-concat'),
+    uglify = require('gulp-uglify'),
+    inject = require('gulp-inject'),
+    replace = require('gulp-replace'),
+    cssmin = require('gulp-cssmin'),
+    es = require('event-stream'),
+    ghPages = require('gulp-gh-pages');
 
 var jsBundle = gulp.src(
     mainBowerFiles({filter: /\.js$/})
