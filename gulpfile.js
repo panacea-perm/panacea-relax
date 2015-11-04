@@ -30,6 +30,9 @@ gulp.task('copy' , function() {
         mainBowerFiles({filter: /images/})
         .concat(['src/images/**/*']))
     .pipe(gulp.dest('./dist/images/'));
+
+    gulp.src('src/CNAME')
+    .pipe(gulp.dest('./dist/'));
 });
 
 gulp.task('build', ['copy'], function () {
