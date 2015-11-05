@@ -11,14 +11,17 @@ footer {
 }
 
 .panacea-logo {
-/*    position: absolute;*/
-    /*top: 0px;*/
-    /*left: 0px;*/
     width: 195px;
     height: 84px;
     background: url(../images/header_logo.png);
     background-color: rgba(255,255,255,.8);
-    /*margin-bottom: 10px;*/
+}
+
+.bagamy-logo {
+    width: 195px;
+    height: 94px;
+    background: url(../images/logo_bagami_mini.png);
+    background-color: rgba(255,255,255,.8);
 }
 
 .table {
