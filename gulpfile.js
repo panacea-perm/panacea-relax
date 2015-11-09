@@ -42,7 +42,7 @@ gulp.task('build', ['copy'], function () {
     .pipe(gulp.dest('./dist'));
 });
 
-gulp.task('deploy', function() {
+gulp.task('deploy', ['build'], function() {
   return gulp.src('./dist/**/*')
     .pipe(ghPages());
 });
