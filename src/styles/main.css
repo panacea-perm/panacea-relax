@@ -28,6 +28,11 @@ footer {
     font-size: 21px;
 }
 
+#more-info-btn {
+    font-size: 45px;
+    margin-top:33px;
+}
+
 .galleria-theme-classic {
     background:white;
 }
@@ -49,7 +54,8 @@ footer {
 }
 
 .headline {
-    padding: 180px 0;
+    padding-top: 45px;
+    padding-bottom: 180px;
 }
 
 .headline h1 {
