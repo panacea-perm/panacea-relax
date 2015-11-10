@@ -12,8 +12,6 @@ var gulp = require('gulp'),
     remember = require('gulp-remember'),
     changed = require('gulp-changed');
 
-var jsBundle, cssBundle;
-
 gulp.task('js', function() {
     return gulp.src(
         mainBowerFiles({filter: /\.js$/})
