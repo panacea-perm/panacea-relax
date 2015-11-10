@@ -1,4 +1,7 @@
-var gulp = require('gulp'),
+
+'use strict';
+
+const gulp = require('gulp'),
     mainBowerFiles = require('main-bower-files'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
@@ -11,7 +14,7 @@ var gulp = require('gulp'),
     remember = require('gulp-remember'),
     changed = require('gulp-changed');
 
-gulp.task('js', function() {
+gulp.task('js', () => {
     return gulp.src(
         mainBowerFiles({filter: /\.js$/})
         .concat(['src/js/main.js'])
@@ -25,7 +28,7 @@ gulp.task('js', function() {
 });
 
 
-gulp.task('css', function() {
+gulp.task('css', () => {
     return gulp.src(
         mainBowerFiles({filter: /\.css$/})
         .concat(['src/styles/main.css'])
@@ -38,40 +41,39 @@ gulp.task('css', function() {
     .pipe(connect.reload());
 });
 
-gulp.task('copy' , function() {
-    var images = gulp.src(
+gulp.task('copy' , () => {
+    let images = gulp.src(
         mainBowerFiles({filter: /images/})
         .concat(['src/images/**/*']))
     .pipe(gulp.dest('./dist/images/'));
 
-    var cname = gulp.src('src/CNAME')
+    let cname = gulp.src('src/CNAME')
     .pipe(gulp.dest('./dist/'));
     return es.merge(images, cname);
 });
 
 
-gulp.task('index', function() {
+gulp.task('index', () => {
     return gulp.src('src/index.html')
     .pipe(gulp.dest('./dist'))
     .pipe(connect.reload());
 });
 
-gulp.task('build', ['js','css', 'copy', 'index'], function () {
-});
+gulp.task('build', ['js','css', 'copy', 'index']);
 
-gulp.task('webserver', function() {
+gulp.task('webserver', () => {
     return connect.server({
         livereload: true,
         root: ['./dist/']
     });
 });
 
-gulp.task('deploy', ['build'], function() {
+gulp.task('deploy', ['build'], () => {
   return gulp.src('./dist/**/*')
   .pipe(ghPages());
 });
 
-gulp.task('default',['build', 'webserver'], function() {
+gulp.task('default',['build', 'webserver'], () => {
     gulp.watch(['./src/styles/**/*.css'], ['css']);
     gulp.watch(['./src/js/**/*.js'], ['js']);
     gulp.watch(['./src/index.html'], ['index']);
